@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 返回事件监听，弹出对话框提醒用户是否退出?
-     * @param keyCode
-     * @param event
-     * @return
+     * @param keyCode keyCode
+     * @param event event
+     * @return bool
      */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -81,16 +81,17 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener listener=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            Intent intent=null;
             switch (v.getId()){
                 case R.id.btn_send:
                     //发送
-                    Intent intent=new Intent(MainActivity.this,SendActivity.class);
+                    intent=new Intent(MainActivity.this,SendActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.btn_receive:
                     //接受
-                    Intent intent1=new Intent(MainActivity.this,ReceiveActivity.class);
-                    startActivity(intent1);
+                    intent=new Intent(MainActivity.this,ReceiveActivity.class);
+                    startActivity(intent);
                     break;
             }
         }
