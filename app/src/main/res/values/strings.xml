@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EmailUserAgent</string>
+    <string name="default_163">"&#064;163.com"</string>
+</resources>
